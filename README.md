@@ -46,7 +46,7 @@ It is fully automated and deploys highly available components across multiple Av
 ---
 How to Deploy
 1️⃣ Clone the repository:
-git clone https://github.com/your-username/saas-infra-terraform.git
+git clone https://github.com/GorshK/SaaS-Startup.git
 cd saas-infra-terraform
 2️⃣ Initialize Terraform:
 terraform init
