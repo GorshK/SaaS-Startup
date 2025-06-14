@@ -30,10 +30,10 @@ resource "aws_instance" "app_server" {
 
 # Attach EC2 to target group
 resource "aws_lb_target_group_attachment" "attach_ec2" {
-  count             = 2
-  target_group_arn  = aws_lb_target_group.saas_tg.arn
-  target_id         = aws_instance.app_server[count.index].id
-  port              = 80
+  count            = 2
+  target_group_arn = aws_lb_target_group.saas_tg.arn
+  target_id        = aws_instance.app_server[count.index].id
+  port             = 80
 }
 
 resource "aws_lb_listener" "http" {

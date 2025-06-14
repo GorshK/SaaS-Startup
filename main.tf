@@ -1,7 +1,7 @@
 # VPC
 resource "aws_vpc" "main" {
   cidr_block = var.vpc_cidr
-  tags = { Name = "saas-vpc" }
+  tags       = { Name = "saas-vpc" }
 }
 
 # Availability Zones
@@ -31,7 +31,7 @@ resource "aws_subnet" "private" {
 # Internet Gateway
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
-  tags = { Name = "saas-igw" }
+  tags   = { Name = "saas-igw" }
 }
 
 # NAT Gateway (only 1 to save cost)
@@ -42,7 +42,7 @@ resource "aws_eip" "nat" {
 resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat.id
   subnet_id     = aws_subnet.public[0].id
-  tags = { Name = "saas-nat" }
+  tags          = { Name = "saas-nat" }
 }
 
 # Public Route Table

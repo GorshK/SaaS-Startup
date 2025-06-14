@@ -29,17 +29,17 @@ resource "aws_security_group" "rds_sg" {
 }
 
 resource "aws_db_instance" "saas_db" {
-  allocated_storage    = 20
-  storage_type         = "gp2"
-  engine               = "mysql"
-  engine_version       = "8.0"
-  instance_class       = "db.t3.micro"
-  db_name                 = "saasdb"
-  username             = "admin"
-  password             = "YourStrongDBPassword1!" # Store this securely in real-world.
-  db_subnet_group_name = aws_db_subnet_group.saas_db_subnet.name
+  allocated_storage      = 20
+  storage_type           = "gp2"
+  engine                 = "mysql"
+  engine_version         = "8.0"
+  instance_class         = "db.t3.micro"
+  db_name                = "saasdb"
+  username               = "admin"
+  password               = "YourStrongDBPassword1!" # Store this securely in real-world.
+  db_subnet_group_name   = aws_db_subnet_group.saas_db_subnet.name
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
-  skip_final_snapshot  = true
+  skip_final_snapshot    = true
 
   tags = {
     Name = "saas-db"
