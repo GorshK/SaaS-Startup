@@ -35,10 +35,9 @@ This project provisions a basic but production-ready secure infrastructure for a
 - Terraform installed (v1.0+ recommended)  
 
 ---
+
 ## 📁 Project Structure
 
-
-...
 ├── main.tf # VPC, Subnets, NAT, IGW, Route Tables
 ├── alb.tf # Application Load Balancer
 ├── ec2.tf # EC2 Instances
@@ -46,7 +45,7 @@ This project provisions a basic but production-ready secure infrastructure for a
 ├── security_groups.tf # Security Groups
 ├── variables.tf # Variables file
 ├── outputs.tf # Outputs
-└── README.md # This file
+└── README.md 
 
 
 ---
