@@ -38,7 +38,7 @@ This project provisions a basic but production-ready secure infrastructure for a
 ## 📁 Project Structure
 
 
-.
+...
 ├── main.tf # VPC, Subnets, NAT, IGW, Route Tables
 ├── alb.tf # Application Load Balancer
 ├── ec2.tf # EC2 Instances
