@@ -35,8 +35,8 @@ This project provisions a basic but production-ready secure infrastructure for a
 - Terraform installed (v1.0+ recommended)  
 
 ---
-
 ## 📁 Project Structure
+
 
 .
 ├── main.tf # VPC, Subnets, NAT, IGW, Route Tables
